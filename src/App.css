@@ -1,0 +1,207 @@
+/* Styles pour l'application Todo List */
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.app h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.app p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Formulaire d'ajout de tâche */
+.formulaire-tache {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-tache {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-tache:focus {
+  border-color: #4CAF50;
+}
+
+.btn-ajouter {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ajouter:hover {
+  background-color: #45a049;
+}
+
+/* Styles pour le composant Button */
+.button {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Message quand il n'y a pas de tâches */
+.message-vide {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste des tâches */
+.liste-taches {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.liste-taches h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Élément de tâche individuelle */
+.tache {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #39bdf1;
+  transition: all 0.3s ease;
+}
+
+.tache:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tache.terminee {
+  opacity: 0.7;
+  background-color: #e8f5e8;
+}
+
+.checkbox-tache {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.texte-tache {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.tache.terminee .texte-tache {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.btn-supprimer {
+  border: none ;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  background-color:red;
+}
+
+.btn-supprimer:hover {
+  background-color: #ffebee;
+}
+
+/* Statistiques */
+.statistiques {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.statistiques p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tache {
+  animation: slideIn 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .formulaire-tache {
+    flex-direction: column;
+  }
+  
+  .input-tache, .btn-ajouter {
+    width: 100%;
+  }
+}
