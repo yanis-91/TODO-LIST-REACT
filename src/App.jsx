@@ -23,7 +23,7 @@ export default function App() {
           }} 
           key={i}
           >
-            {i}
+            {todo}
           </Todo>
         })}
       </div>
